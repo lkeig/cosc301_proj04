@@ -2,12 +2,19 @@
  * 
  */
 
+#include <ucontext.h>
+
 #ifndef __THREADSALIVE_H__
 #define __THREADSALIVE_H__
 
 /* ***************************
         type definitions
    *************************** */
+
+struct node {
+    ucontext_t *nodeCTX;
+    struct node *next; 
+};
 
 typedef struct {
 
